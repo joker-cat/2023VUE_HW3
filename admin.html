@@ -67,7 +67,8 @@
                 </table>
                 <div class="d-flex justify-content-between px-4">
                     <span class="align-self-center">目前有 {{ products.length }} 項產品</span>
-                    <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#productModal">建立新的產品</button>
+                    <button class="btn btn-success" data-bs-toggle="modal"
+                        data-bs-target="#productModal">建立新的產品</button>
                 </div>
             </div>
             <div class="col-lg-5 col-sm-12">
@@ -146,7 +147,10 @@
                                 <div class="mb-3">
                                     <div class="mb-2">
                                         <label for="imageUrl" class="form-label">圖片展示(按新增獲取假圖)</label>
-                                        <img class="img-fluid" src="" alt="">
+                                        <img class="img-fluid" v-if="addProduct.data.imageUrl" :src="addProduct.data.imageUrl" alt="圖片ERR">
+                                        <template v-for="(img,idx) in addProduct.data.imagesUrl" :key="img">
+                                            <img :src="img" alt="圖片error" class="images m-2" style="width: 200px;">
+                                        </template>
                                     </div>
                                     <div>
                                         <button type="button" class="btn btn-outline-primary btn-sm d-block w-100"
@@ -173,7 +177,6 @@
                             <h5 id="putProductModalLabel" class="modal-title">
                                 <span>編輯產品</span>
                             </h5>
-                            <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
                         </div>
                         <div class="modal-body">
                             <template v-if="putChooseIsNull">

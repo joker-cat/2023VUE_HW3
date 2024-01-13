@@ -97,7 +97,7 @@ createApp({
             if (this.addProduct.data.imagesUrl.length === 5) return;
             let math = Math.floor(Math.random() * 50) + 1;
             for (let i = 1; i <= 5; i++) {
-                this.addProduct.data.imagesUrl.push(`https://picsum.photos/id/${math + 10 * i}/500/300`)
+                this.addProduct.data.imagesUrl.push(`https://picsum.photos/id/${math + 5 * i}/500/300`)
             }
             this.addProduct.data.imageUrl = `https://picsum.photos/id/${math}/500/300`
         },
