@@ -11,6 +11,7 @@ body {
     padding: 15px;
     margin: auto;
 }
+
 img {
     object-fit: contain;
     max-width: 100%;
@@ -21,16 +22,19 @@ img {
 }
 
 .images {
-    height: 150px;
+    width: 200px;
     display: inline;
 }
-.form-control{
+
+.form-control {
     display: inline-block;
     width: 200px;
 }
-.form-label{
+
+.form-label {
     margin-right: 15px;
 }
-.mb-3{
+
+.mb-3 {
     text-align: left;
 }
